@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import TestUseEffect from './Components/TestUseEffect/TestUseEffect';
+import MealFinder from './Components/MealFinder/MealFinder';
 
 function App() {
+  const [likeColor, setLikeColor] = useState('');
+  const [likeColors, setLikeColors] = useState('');
+ const colorChange = () => {
+    const colorA = likeColor ? '' : 'primary';
+    setLikeColor(colorA);
+ }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AccessAlarmIcon></AccessAlarmIcon>
+      <ThumbUpAltIcon onClick ={colorChange}  color={likeColor}></ThumbUpAltIcon>
+      <ThumbUpAltIcon onClick ={() => setLikeColors(likeColors ? '' : 'secondary')}  color={likeColors}></ThumbUpAltIcon>
+
+      <TestUseEffect></TestUseEffect>
+      <MealFinder></MealFinder>
     </div>
   );
 }
