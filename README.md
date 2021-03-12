@@ -5,10 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 
-### `yarn test`
+### `Test Purpose`
 
-
-### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
